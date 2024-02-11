@@ -1,0 +1,10 @@
+﻿
+git remote add origin https://github.com/itamartz/Pipeline-as-code.git
+
+git remote -v
+
+git commit -m "Add project to github"
+
+git push origin
+
+git push origin main -f
