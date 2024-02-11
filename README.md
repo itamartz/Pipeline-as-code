@@ -27,3 +27,6 @@ ssh ec2-user@localhost -p 4000
 
 ## puttygen
 use puttygen to convert ppk to id_dsa and id_rsa.pub
+
+## manning
+https://livebook.manning.com/book/pipeline-as-code/chapter-4/178
