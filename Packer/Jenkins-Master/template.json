@@ -1,0 +1,56 @@
+﻿{
+    "variables": {
+        "region": "il-central-1",
+        "aws_profile": "AWS PROFILE",
+        "instance_type": "t3.micro",
+        "ssh_key": "PRIVATE SSH KEY"
+    },
+    "builders": [
+        {
+            "type": "amazon-ebs",
+            "profile": "{{user `aws_profile`}}",
+            "region": "{{user `region`}}",
+            "instance_type": "{{user `instance_type`}}",
+            "source_ami": "{{user `source_ami`}}",
+            "ssh_username": "ec2-user",
+            "ami_name": "jenkins-master-2.426.2",
+            "ami_description": "Amazon Linux Image with Jenkins Server",
+            "source_ami_filter": {
+                "filters": {
+                    "virtualization-type": "hvm",
+                    "name": "Amazon Linux AMI-*",
+                    "root-device-type": "ebs"
+                },
+                "owners": [
+                    "amazon"
+                ],
+                "most_recent": true
+            },
+            "run_tags": {
+                "Name": "packer-builder"
+            }
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "file",
+            "source": "./scripts",
+            "destination": "/tmp/"
+        },
+        {
+            "type": "file",
+            "source": "./config",
+            "destination": "/tmp/"
+        },
+        {
+            "type": "file",
+            "source": "{{user `ssh_key`}}",
+            "destination": "/tmp/id_rsa"
+        },
+        {
+            "type": "shell",
+            "script": "./setup.sh",
+            "execute_command": "sudo -E -S sh '{{ .Path }}'"
+        }
+    ]
+}

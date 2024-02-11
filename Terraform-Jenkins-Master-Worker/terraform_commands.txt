@@ -1,0 +1,14 @@
+﻿terraform init
+terraform init -upgrade
+
+terraform plan
+terraform plan -out=terraform-plan-out-file
+
+terraform apply
+terraform apply -auto-approve
+terraform apply "terraform-plan-out-file"
+
+terraform output
+
+terraform destroy
+terraform destroy -auto-approve

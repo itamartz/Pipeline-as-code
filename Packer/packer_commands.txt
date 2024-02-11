@@ -1,0 +1,12 @@
+﻿packer init .
+
+packer fmt .
+
+packer validate .
+packer validate -var-file=c:\temp\packer_vars.hcl .
+
+clear; packer build .
+
+## Varibles - packer_vars.hcl ##
+## Curently we dont use var file
+## ssh_key=C:\Users\itamartz\Desktop\us-west-2.pem

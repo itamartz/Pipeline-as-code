@@ -1,0 +1,4 @@
+﻿
+git remote add origin https://github.com/itamartz/Pipeline-as-code.git
+
+git push -u -f origin main
