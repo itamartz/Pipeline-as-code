@@ -30,3 +30,10 @@ use puttygen to convert ppk to id_dsa and id_rsa.pub
 
 ## manning
 https://livebook.manning.com/book/pipeline-as-code/chapter-4/178
+
+## powershell
+Install-Module -Name AWSPowerShell -Force
+
+$Region = 'us-west-2'
+Get-EC2Image -Owner self -Region $Region | Unregister-EC2Image -Region $Region
+Get-EC2Snapshot -Region $Region -OwnerId 887234254276 | Remove-EC2Snapshot -Region $Region -Confirm:$false -ErrorAction SilentlyContinue -Verbose
