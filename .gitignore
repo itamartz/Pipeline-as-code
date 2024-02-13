@@ -7,3 +7,4 @@ Terraform-Jenkins-Master-Worker/.terraform/providers/registry.terraform.io/hashi
 Terraform-Test-Packer-Images/.terraform/providers/
 *.exe
 **/*.exe
+Terraform-Test-Packer-Images/Jenkins-Master/terraform-plan-out-file

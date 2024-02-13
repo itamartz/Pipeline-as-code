@@ -67,3 +67,7 @@ resource "aws_instance" "test_jenkins_master" {
     Author = var.author
   }
 }
+
+output "dns" {
+  value = aws_instance.test_jenkins_master.public_dns
+}
