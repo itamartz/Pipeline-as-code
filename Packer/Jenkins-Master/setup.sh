@@ -16,10 +16,10 @@ sudo yum update –y
 # yum install -y java-1.8.0-openjdk
 
 echo "downloading jenkins repo"
-sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat-stable/jenkins.repo
+sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
 
 echo "importing jenkins key"
-sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+sudo rpm --import https://pkg.jenkins.io/redhat/jenkins.io-2023.key
 
 echo "yum upgrade"
 sudo yum upgrade

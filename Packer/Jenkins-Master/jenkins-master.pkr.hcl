@@ -14,7 +14,7 @@ variable "ssh_key" {
 }
 
 source "amazon-ebs" "jenkins-master" {
-  ami_name      = "Jenkins-Master-2.426.3"
+  ami_name      = "Jenkins-Master-2.445"
   instance_type = "t2.micro"
   region        = "us-west-2"
   ssh_username  = "ec2-user"
