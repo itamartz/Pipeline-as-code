@@ -1,4 +1,4 @@
-﻿import jenkins.model.Jenkins
+import jenkins.model.Jenkins
 import jenkins.security.s2m.*
 
 Jenkins jenkins = Jenkins.getInstance()

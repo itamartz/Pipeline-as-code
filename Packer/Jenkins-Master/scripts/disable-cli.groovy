@@ -1,4 +1,4 @@
-﻿import jenkins.model.Jenkins
+import jenkins.model.Jenkins
 
 Jenkins jenkins = Jenkins.getInstance()
 

@@ -1,4 +1,4 @@
-﻿import jenkins.model.*
+import jenkins.model.*
 import hudson.util.*;
 import jenkins.install.*;
 
