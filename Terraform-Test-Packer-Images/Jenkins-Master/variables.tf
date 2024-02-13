@@ -1,7 +1,7 @@
 ﻿variable "packer_ami_id" {
   type        = string
   description = "Packer ID For Jenkins Master AMI"
-  default     = "ami-0f26c83d2cbdc5077"
+  default     = "ami-ami-0ddda59d395c08587"
 }
 
 variable "region" {

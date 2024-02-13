@@ -8,3 +8,8 @@ Terraform-Test-Packer-Images/.terraform/providers/
 *.exe
 **/*.exe
 Terraform-Test-Packer-Images/Jenkins-Master/terraform-plan-out-file
+Terraform-Test-Packer-Images/Jenkins-Master/terraform.tfstate
+Terraform-Test-Packer-Images/Jenkins-Master/terraform.tfstate
+Terraform-Test-Packer-Images/Jenkins-Master/terraform.tfstate.backup
+Terraform-Test-Packer-Images/Jenkins-Master/terraform.tfstate
+Terraform-Test-Packer-Images/Jenkins-Master/terraform-plan-out-file
