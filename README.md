@@ -35,5 +35,13 @@ https://livebook.manning.com/book/pipeline-as-code/chapter-4/178
 Install-Module -Name AWSPowerShell -Force
 
 $Region = 'us-west-2'
-Get-EC2Image -Owner self -Region $Region | Unregister-EC2Image -Region $Region
-Get-EC2Snapshot -Region $Region -OwnerId 887234254276 | Remove-EC2Snapshot -Region $Region -Confirm:$false -ErrorAction SilentlyContinue -Verbose
+
+$List = New-Object System.Collections.Generic.List[string]
+$List.Add('jenkins-master')
+
+$Filter = [Amazon.EC2.Model.Filter]::new('tag:name',$List)
+$EC2Image = Get-EC2Image -Owner self -Region $Region -Filter $Filter
+$EC2Image | Unregister-EC2Image -Region $Region
+
+Get-EC2Snapshot -Region $Region -OwnerId 887234254276
+Remove-EC2Snapshot -SnapshotId $EC2Image.BlockDeviceMapping.ebs.SnapshotId -Region $Region -Confirm:$false -ErrorAction SilentlyContinue -Verbose
