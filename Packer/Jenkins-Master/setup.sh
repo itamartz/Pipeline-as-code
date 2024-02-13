@@ -80,3 +80,6 @@ sudo systemctl start jenkins
 
 echo "checking jenkins status"
 sudo systemctl status jenkins
+
+echo "sleep for 30 seconds"
+sudo sleep 30
